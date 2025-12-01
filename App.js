@@ -1,14 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import { Alert, StyleSheet, Text, View, Button } from "react-native";
+import Chatbot from "./components/Chatbot"; // Chatbot 컴포넌트 로드
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    // <View style={styles.container}>
+    //   <Text>Open up App.js to start working on your app!</Text>
+    //   <StatusBar style="auto" />
 
-      <Button title="Click" onPress={() => Alert.alert("Hello")}></Button>
-    </View>
+    //   <Button title="Click" onPress={() => Alert.alert("Hello")}></Button>
+    // </View>
+
+    // Cahtbot 컴포넌트 추가
+    <Chatbot />
   );
 }
 
