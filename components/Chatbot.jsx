@@ -45,4 +45,34 @@ export default function Chatbot() {
       setResponseText("API 호출에 실패했습니다.");
     }
   };
+
+  return (
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.scrollContent} // 콘텐츠 정렬 설정
+    >
+      {/* 흰색 카드 영역 */}
+      <View style={styles.card}>
+        <Text style={styles.title}>Gemini AI Prompt</Text>
+
+        {/* 입력창 */}
+        <TextInput
+          style={styles.input}
+          placeholder="AI에게 질문을 입력하세요..."
+          multiline={true}
+          textAlignVertical="top"
+          value={prompt}
+          onChangeText={setPrompt}
+        />
+
+        {/* button */}
+        <Button title="send" onPress={handleSend} color="#4A69FF" />
+      </View>
+
+      {/* 응답 표시 영역 */}
+      <View style={styles.responseArea}>
+        <Text style={styles.responseText}>{responseText}</Text>
+      </View>
+    </ScrollView>
+  );
 }
