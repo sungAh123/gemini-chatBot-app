@@ -29,7 +29,8 @@
     "extra": {
       "eas": {
         "projectId": "3916249a-47b4-4d8d-bd8c-831c44a380b7"
-      }
+      },
+      "API_URL": "process.env.API_URL,"
     }
   }
 }
